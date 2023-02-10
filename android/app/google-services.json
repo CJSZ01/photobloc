@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "1072991004396",
+    "project_id": "photobloc",
+    "storage_bucket": "photobloc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072991004396:android:d092945f69c4e2d24727c9",
+        "android_client_info": {
+          "package_name": "com.cjsz.photobloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072991004396-ukiv80uhg21dhp1pke7qu8fkmtbiev73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbMMgWA_qFf6NyXysKaEZ4UxpRZiFbHoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072991004396-ukiv80uhg21dhp1pke7qu8fkmtbiev73.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1072991004396-9vu29r9410pnja894kjdccm0542jd008.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.testingblocCourse"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072991004396:android:c019fa47d20c80cd4727c9",
+        "android_client_info": {
+          "package_name": "com.example.photobloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072991004396-ukiv80uhg21dhp1pke7qu8fkmtbiev73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbMMgWA_qFf6NyXysKaEZ4UxpRZiFbHoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072991004396-ukiv80uhg21dhp1pke7qu8fkmtbiev73.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1072991004396-9vu29r9410pnja894kjdccm0542jd008.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.testingblocCourse"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072991004396:android:1ef8b6306ecb0aa84727c9",
+        "android_client_info": {
+          "package_name": "com.example.testingbloc_course"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072991004396-ukiv80uhg21dhp1pke7qu8fkmtbiev73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbMMgWA_qFf6NyXysKaEZ4UxpRZiFbHoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072991004396-ukiv80uhg21dhp1pke7qu8fkmtbiev73.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1072991004396-9vu29r9410pnja894kjdccm0542jd008.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.testingblocCourse"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
