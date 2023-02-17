@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:photobloc/bloc/app_bloc.dart';
 import 'package:photobloc/bloc/app_event.dart';
 import 'package:photobloc/bloc/app_state.dart';
-import 'package:photobloc/dialogs/show_auth_error.dart';
-import 'package:photobloc/loading/loading_screen.dart';
-import 'package:photobloc/views/login_view.dart';
-import 'package:photobloc/views/photo_gallery_view.dart';
-import 'package:photobloc/views/register_view.dart';
+import 'package:photobloc/views/dialogs/show_auth_error.dart';
+import 'package:photobloc/views/gallery/photo_gallery_view.dart';
+import 'package:photobloc/views/loading/loading_screen.dart';
+import 'package:photobloc/views/login/login_view.dart';
+import 'package:photobloc/views/register/register_view.dart';
 
 class PhotoblocApp extends StatelessWidget {
   const PhotoblocApp({
