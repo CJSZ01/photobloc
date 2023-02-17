@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:photobloc/bloc/app_bloc.dart';
 import 'package:photobloc/bloc/app_event.dart';
-import 'package:photobloc/extensions/if_debugging.dart';
+import 'package:photobloc/utils/extensions/if_debugging.dart';
 
 class RegisterView extends HookWidget {
   const RegisterView({super.key});

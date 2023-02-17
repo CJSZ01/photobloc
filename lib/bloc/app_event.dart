@@ -6,27 +6,13 @@ abstract class AppEvent {
 }
 
 @immutable
-class AppEventUploadImage implements AppEvent {
-  final String filePathToUpload;
-
-  const AppEventUploadImage({
-    required this.filePathToUpload,
-  });
-}
-
-@immutable
-class AppEventDeleteAccount implements AppEvent {
-  const AppEventDeleteAccount();
-}
-
-@immutable
-class AppEventLogOut implements AppEvent {
-  const AppEventLogOut();
-}
-
-@immutable
 class AppEventInitialize implements AppEvent {
   const AppEventInitialize();
+}
+
+@immutable
+class AppEventGoToLogin implements AppEvent {
+  const AppEventGoToLogin();
 }
 
 @immutable
@@ -37,6 +23,11 @@ class AppEventLogIn implements AppEvent {
 }
 
 @immutable
+class AppEventGoToRegistration implements AppEvent {
+  const AppEventGoToRegistration();
+}
+
+@immutable
 class AppEventRegister implements AppEvent {
   final String email;
   final String password;
@@ -44,11 +35,27 @@ class AppEventRegister implements AppEvent {
 }
 
 @immutable
-class AppEventGoToRegistration implements AppEvent {
-  const AppEventGoToRegistration();
+class AppEventLogOut implements AppEvent {
+  const AppEventLogOut();
 }
 
 @immutable
-class AppEventGoToLogin implements AppEvent {
-  const AppEventGoToLogin();
+class AppEventDeleteAccount implements AppEvent {
+  const AppEventDeleteAccount();
+}
+
+@immutable
+class AppEventUploadImage implements AppEvent {
+  final String filePathToUpload;
+
+  const AppEventUploadImage({
+    required this.filePathToUpload,
+  });
+}
+
+@immutable
+class AppEventDeleteImage implements AppEvent {
+  final String filePathToDelete;
+
+  const AppEventDeleteImage(this.filePathToDelete);
 }

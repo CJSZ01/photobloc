@@ -5,8 +5,9 @@ import 'package:image_picker/image_picker.dart';
 import 'package:photobloc/bloc/app_bloc.dart';
 import 'package:photobloc/bloc/app_event.dart';
 import 'package:photobloc/bloc/app_state.dart';
-import 'package:photobloc/views/main_popup_menu_button.dart';
-import 'package:photobloc/views/storage_image_view.dart';
+import 'package:photobloc/views/gallery/main_popup_menu_button.dart';
+
+import 'storage_image_view.dart';
 
 class PhotoGalleryView extends HookWidget {
   const PhotoGalleryView({super.key});
@@ -25,6 +26,7 @@ class PhotoGalleryView extends HookWidget {
               if (image == null) {
                 return;
               }
+              // ignore: use_build_context_synchronously
               context.read<AppBloc>().add(
                     AppEventUploadImage(filePathToUpload: image.path),
                   );

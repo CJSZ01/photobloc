@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:photobloc/auth/auth_error.dart';
-import 'package:photobloc/dialogs/generic_dialog.dart';
+import 'package:photobloc/views/dialogs/generic_dialog.dart';
 
 Future<void> showAuthError(
     {required BuildContext context, required AuthError authError}) {

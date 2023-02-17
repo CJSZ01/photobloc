@@ -1,9 +1,11 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:photobloc/bloc/app_bloc.dart';
 import 'package:photobloc/bloc/app_event.dart';
-import 'package:photobloc/dialogs/delete_account_dialog.dart';
-import 'package:photobloc/dialogs/logout_dialog.dart';
+import 'package:photobloc/views/dialogs/delete_account_dialog.dart';
+import 'package:photobloc/views/dialogs/logout_dialog.dart';
 
 enum MenuAction { logout, deleteAccount }
 
