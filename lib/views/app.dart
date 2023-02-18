@@ -46,6 +46,14 @@ class PhotoblocApp extends StatelessWidget {
             } else {
               LoadingScreen.instance().hide();
             }
+            if (state.snackbarMessage != null) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  duration: const Duration(seconds: 3),
+                  content: Text(state.snackbarMessage!),
+                ),
+              );
+            }
             final authError = state.authError;
             if (authError != null) {
               showAuthError(context: context, authError: authError);

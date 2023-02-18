@@ -7,12 +7,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:photobloc/auth/auth_error.dart';
 import 'package:photobloc/bloc/app_event.dart';
 import 'package:photobloc/bloc/app_state.dart';
+import 'package:photobloc/utils/delete_image.dart';
 import 'package:photobloc/utils/upload_image.dart';
 
 class AppBloc extends Bloc<AppEvent, AppState> {
   Future<Iterable<Reference>> _getImages(String userId) {
-    var a = FirebaseStorage.instance.ref(userId).list();
-    log(a.toString());
+    FirebaseStorage.instance.ref(userId).list();
     return FirebaseStorage.instance
         .ref(userId)
         .list()
@@ -186,9 +186,17 @@ class AppBloc extends Bloc<AppEvent, AppState> {
         isLoading: true,
       ));
       final file = File(event.filePathToUpload);
-      await uploadImage(file: file, userId: user.uid);
+      final snackbarMessage = await uploadImage(file: file, userId: user.uid)
+          ? 'Image uploaded successfully'
+          : 'Failed to upload image';
       final images = await _getImages(user.uid);
-      emit(AppStateLoggedIn(user: user, images: images, isLoading: false));
+      emit(
+        AppStateLoggedIn(
+            user: user,
+            images: images,
+            isLoading: false,
+            snackbarMessage: snackbarMessage),
+      );
     });
 
     on<AppEventDeleteImage>((event, emit) async {
@@ -200,15 +208,36 @@ class AppBloc extends Bloc<AppEvent, AppState> {
         );
         return;
       }
+      log(
+        ' Before loading \n${state.images}',
+      );
       emit(AppStateLoggedIn(
         user: user,
-        images: state.images ?? [],
+        images: const [],
         isLoading: true,
       ));
-      final file = File(event.filePathToDelete);
-      await uploadImage(file: file, userId: user.uid);
+      log(
+        ' After loading \n${state.images}',
+      );
+
+      final snackbarMessage =
+          await deleteImage(image: event.image, userId: user.uid)
+              ? 'Image deleted successfully'
+              : 'Failed to delete image';
+      log(
+        ' Image deleted \n${state.images}',
+      );
       final images = await _getImages(user.uid);
-      emit(AppStateLoggedIn(user: user, images: images, isLoading: false));
+      log(
+        ' Fetched images \n${state.images}',
+      );
+      emit(
+        AppStateLoggedIn(
+            user: user,
+            images: images,
+            isLoading: false,
+            snackbarMessage: snackbarMessage),
+      );
     });
   }
 }

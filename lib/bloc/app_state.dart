@@ -31,8 +31,12 @@ extension GetImages on AppState {
 abstract class AppState {
   final bool isLoading;
   final AuthError? authError;
+  final String? snackbarMessage;
 
-  const AppState({required this.isLoading, required this.authError});
+  const AppState(
+      {required this.isLoading,
+      required this.authError,
+      required this.snackbarMessage});
 }
 
 @immutable
@@ -43,6 +47,7 @@ class AppStateLoggedIn extends AppState {
       {required this.user,
       required this.images,
       required super.isLoading,
+      super.snackbarMessage,
       super.authError});
 
   @override
@@ -67,11 +72,18 @@ class AppStateLoggedIn extends AppState {
 
 @immutable
 class AppStateLoggedOut extends AppState {
-  const AppStateLoggedOut({required super.isLoading, super.authError});
+  const AppStateLoggedOut({
+    required super.isLoading,
+    super.authError,
+    super.snackbarMessage,
+  });
 }
 
 @immutable
 class AppStateIsInRegistrationView extends AppState {
-  const AppStateIsInRegistrationView(
-      {required super.isLoading, super.authError});
+  const AppStateIsInRegistrationView({
+    required super.isLoading,
+    super.authError,
+    super.snackbarMessage,
+  });
 }

@@ -1,3 +1,4 @@
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 @immutable
@@ -55,7 +56,7 @@ class AppEventUploadImage implements AppEvent {
 
 @immutable
 class AppEventDeleteImage implements AppEvent {
-  final String filePathToDelete;
+  final Reference image;
 
-  const AppEventDeleteImage(this.filePathToDelete);
+  const AppEventDeleteImage({required this.image});
 }

@@ -43,7 +43,12 @@ class PhotoGalleryView extends HookWidget {
         crossAxisSpacing: 20,
         children: images
             .map(
-              (image) => StorageImageView(image: image),
+              (image) => GestureDetector(
+                child: StorageImageView(image: image),
+                onTap: () => context.read<AppBloc>().add(
+                      AppEventDeleteImage(image: image),
+                    ),
+              ),
             )
             .toList(),
       ),

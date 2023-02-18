@@ -30,13 +30,9 @@ class StorageImageView extends StatelessWidget {
                 fit: BoxFit.cover,
               );
             } else if (snapshot.hasError) {
-              return const Center(
-                child: Text(
-                  'An error ocurred while fetching images',
-                ),
-              );
+              return const Center(child: Icon(Icons.question_mark));
             } else {
-              return const CircularProgressIndicator();
+              return const Center(child: CircularProgressIndicator());
             }
         }
       },
