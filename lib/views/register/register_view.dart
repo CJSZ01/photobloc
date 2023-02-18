@@ -16,7 +16,7 @@ class RegisterView extends HookWidget {
         useTextEditingController(text: 'aaa123!'.ifDebugging);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Register'),
+        title: const Text('Photobloc - Register'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

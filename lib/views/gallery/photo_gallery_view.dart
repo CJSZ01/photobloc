@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:photobloc/bloc/app_bloc.dart';
 import 'package:photobloc/bloc/app_event.dart';
 import 'package:photobloc/bloc/app_state.dart';
+import 'package:photobloc/views/dialogs/about_photobloc_dialog.dart';
 import 'package:photobloc/views/gallery/main_popup_menu_button.dart';
 
 import 'storage_image_view.dart';
@@ -18,8 +19,17 @@ class PhotoGalleryView extends HookWidget {
     final images = context.watch<AppBloc>().state.images ?? [];
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Photo Gallery'),
+        title: const Text('Photobloc'),
         actions: [
+          IconButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => const AboutPhotoblocDialog(),
+              );
+            },
+            icon: const Icon(Icons.question_mark),
+          ),
           IconButton(
             onPressed: () async {
               final image = await picker.pickImage(source: ImageSource.gallery);

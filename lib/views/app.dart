@@ -23,9 +23,8 @@ class PhotoblocApp extends StatelessWidget {
         ),
       child: MaterialApp(
         title: 'Photobloc',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        theme:
+            ThemeData(primarySwatch: Colors.red, brightness: Brightness.dark),
         home: BlocConsumer<AppBloc, AppState>(
           builder: (context, state) {
             if (state is AppStateLoggedOut) {

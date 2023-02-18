@@ -16,7 +16,7 @@ class LoginView extends HookWidget {
         useTextEditingController(text: 'aaa123!'.ifDebugging);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Log in'),
+        title: const Text('Photobloc - Log in'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
