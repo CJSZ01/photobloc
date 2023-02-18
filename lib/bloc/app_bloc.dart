@@ -208,29 +208,20 @@ class AppBloc extends Bloc<AppEvent, AppState> {
         );
         return;
       }
-      log(
-        ' Before loading \n${state.images}',
-      );
+
       emit(AppStateLoggedIn(
         user: user,
         images: const [],
         isLoading: true,
       ));
-      log(
-        ' After loading \n${state.images}',
-      );
 
       final snackbarMessage =
           await deleteImage(image: event.image, userId: user.uid)
               ? 'Image deleted successfully'
               : 'Failed to delete image';
-      log(
-        ' Image deleted \n${state.images}',
-      );
+
       final images = await _getImages(user.uid);
-      log(
-        ' Fetched images \n${state.images}',
-      );
+
       emit(
         AppStateLoggedIn(
             user: user,
