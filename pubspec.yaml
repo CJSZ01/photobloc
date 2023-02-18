@@ -1,5 +1,5 @@
 name: photobloc
-description: Learning Bloc with a real app
+description: Learning Bloc with a firebase-backed app
 
 publish_to: 'none' 
 
@@ -9,10 +9,17 @@ environment:
   sdk: '>=2.18.6 <3.0.0'
 
 dependencies:
+  firebase_auth: ^4.2.6
   firebase_core: ^2.5.0
   firebase_storage: ^11.0.11
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.2
+  flutter_hooks: ^0.18.5+1
+  flutter_svg: ^1.1.6
+  image_picker: ^0.8.6+1
+  url_launcher: ^6.1.9
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +28,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets: 
+  - assets/
